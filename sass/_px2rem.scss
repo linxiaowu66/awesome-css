@@ -1,0 +1,23 @@
+// 去除单位并返回数值
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+// px转rem
+@mixin px2rem($attr, $num, $base: 37.5) {
+  $list: (); //存储所有转换后的值
+
+  // 遍历所有值并转换为rem单位
+  @for $i from 1 through length($num) {
+    // 计算单个rem值
+    $value: strip-units(nth($num, $i)) / $base * 1rem;
+    // 添加到列表中
+    $list: append($list, $value);
+  }
+
+  // 设置属性值
+  #{$attr}:$list;
+}
+
+@function px2rem($num, $base: 37.5) {
+  @return strip-units($num) / $base * 1rem;
+}
