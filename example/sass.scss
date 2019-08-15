@@ -1,0 +1,139 @@
+@import '../sass/_clearfix.scss';
+@import '../sass/_ellipsis.scss';
+@import '../sass/_noScroll.scss';
+@import '../sass/_onePxBorder.scss';
+@import '../sass/_px2rem.scss';
+@import '../sass/_center.scss';
+@import '../sass/_gradient.scss';
+@import '../sass/_triangle.scss';
+
+#example {
+  .clear-fix-demo{
+    .container{
+      border: 2px solid orange;
+      padding: 10px;
+      .float-left{
+        border: 2px dashed black;
+        float: left;
+        width: 100px;
+      }
+      .text {
+        border: 2px solid blue;
+      }
+      &.clearfix{
+        @extend %clearfix
+      }
+    }
+    .brother{
+      margin-top: 10px;
+      border: 2px solid palevioletred;
+    }
+  }
+  .ellipsis-demo{
+    .one-line-ellipsis{
+      margin-top: 10px;
+      width: 100px;
+      @extend %ellipsis;
+      border: 2px solid peru;
+    }
+    .multiple-line-ellipsis{
+      margin-top: 10px;
+      width: 100px;
+      @include ellipsis(3);
+      border: 2px solid peru;
+    }
+  }
+  .noscrollbar-demo{
+    margin-top: 10px;
+    overflow: scroll;
+    height: 100px;
+    width: 100px;
+    border: 2px solid purple;
+    @extend %no-scrollbar;
+  }
+  .one-px-border-demo{
+    .bottom-border{
+      @include one-px-border(bottom, dashed, gold);
+      width: 100px;
+      margin-top: 10px;
+    }
+    .full-border{
+      @include full-px-border(gold);
+      width: 100px;
+      margin-top: 10px;
+    }
+  }
+  .px-2-rem-demo{
+    @include px2rem(height, 400px);
+    @include px2rem(width, 200px);
+    @include px2rem(padding, 5px 10px);
+    margin: px2rem(10px);
+  }
+  .center-demo{
+    // 因为center函数是使用相对定位来实现的，所以其父元素记得设置relative。
+    position: relative;
+    border: 1px solid yellowgreen;
+    width: 400px;
+    height: 400px;
+    .both{
+      width: 100px;
+      height: 100px;
+      border: 1px solid goldenrod;
+      @include center(both)
+    }
+    .vertical{
+      width: 100px;
+      height: 100px;
+      border: 1px solid goldenrod;
+      @include center(vertical)
+    }
+    .horizontal{
+      width: 100px;
+      height: 100px;
+      border: 1px solid goldenrod;
+      @include center(horizontal)
+    }
+  }
+  .gradient-demo{
+    .vertical{
+      margin-top: 10px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid grey;
+      @include background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), vertical)
+    }
+    .horizontal{
+      margin-top: 10px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid grey;
+      @include background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), horizontal)
+    }
+    .radius{
+      margin-top: 10px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid grey;
+      @include background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), radius)
+    }
+  }
+  .arrow-demo{
+    margin-top: 10px;
+    .left{
+      @include triangle(left, 10px);
+      margin-bottom: 10px;
+    }
+    .right{
+      @include triangle(right, 10px);
+      margin-bottom: 10px;
+    }
+    .down{
+      @include triangle(down, 10px);
+      margin-bottom: 10px;
+    }
+    .up{
+      @include triangle(up, 10px);
+      margin-bottom: 10px;
+    }
+  }
+}
