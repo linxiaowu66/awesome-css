@@ -68,7 +68,7 @@
   width: 100px;
   margin-top: 10px; }
   #example .one-px-border-demo .bottom-border:after {
-    border-top: 1px dashed gold;
+    border-top: 1px dashed red;
     bottom: 0; }
     @media screen and (-webkit-min-device-pixel-ratio: 1) {
       #example .one-px-border-demo .bottom-border:after {
@@ -91,7 +91,7 @@
     content: '';
     position: absolute;
     z-index: -1;
-    border: 1px solid gold;
+    border: 1px solid red;
     width: 200%;
     height: 200%;
     border-radius: inherit;
@@ -153,30 +153,30 @@
   border: 1px solid grey;
   background: #ff929c;
   background: radial-gradient(ellipse at center, #ff929c, #d80000); }
-#example .arrow-demo {
+#example .triangle-demo {
   margin-top: 10px; }
-  #example .arrow-demo .left {
+  #example .triangle-demo .left {
     width: 0px;
     height: 0px;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-right: 10px solid #F96001;
     margin-bottom: 10px; }
-  #example .arrow-demo .right {
+  #example .triangle-demo .right {
     width: 0px;
     height: 0px;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid #F96001;
     margin-bottom: 10px; }
-  #example .arrow-demo .down {
+  #example .triangle-demo .down {
     width: 0px;
     height: 0px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #F96001;
     margin-bottom: 10px; }
-  #example .arrow-demo .up {
+  #example .triangle-demo .up {
     width: 0px;
     height: 0px;
     border-left: 10px solid transparent;

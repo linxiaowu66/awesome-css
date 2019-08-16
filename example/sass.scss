@@ -53,12 +53,12 @@
   }
   .one-px-border-demo{
     .bottom-border{
-      @include one-px-border(bottom, dashed, gold);
+      @include one-px-border(bottom, dashed, red);
       width: 100px;
       margin-top: 10px;
     }
     .full-border{
-      @include full-px-border(gold);
+      @include full-px-border(red);
       width: 100px;
       margin-top: 10px;
     }
@@ -117,7 +117,7 @@
       @include background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), radius)
     }
   }
-  .arrow-demo{
+  .triangle-demo{
     margin-top: 10px;
     .left{
       @include triangle(left, 10px);
