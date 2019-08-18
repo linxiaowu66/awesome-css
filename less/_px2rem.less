@@ -1,0 +1,30 @@
+// 去除单位并返回数值
+.strip-units(@number) {
+  @return: replace(~"@{number}", "px", "");
+}
+
+// px转rem
+.px2remWithAttr(@attr, @num, @base: 37.5) {
+  @list: replace(~"@{num}", " ", ","); //转换为数组
+  @result: "";
+
+  // 遍历所有值并转换为rem单位
+  .generate(@n, @i: 1) when (@i < @n) {
+    // 计算单个rem值
+    @value: .strip-units(extract(@list, @i)) / @base * 1rem;
+    // 添加到列表中
+    @result: "@{result} @{value}";
+    .generate(@n, (@i + 1));
+  }
+  .generate(length(@list));
+
+  & {
+    @{attr}: @result
+  }
+  // 设置属性值
+  // @return:
+}
+
+.px2rem(@px, @base: 37.5) {
+  @px2rem: @px / @base * 1rem;
+}
