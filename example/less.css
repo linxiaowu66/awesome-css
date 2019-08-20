@@ -110,10 +110,10 @@
   top: 0;
 }
 #example .px-2-rem-demo {
-  height: "";
-  width: "";
-  padding: "";
-  margin: [object Object];
+  height:  10.66666667rem;
+  width:  5.33333333rem;
+  padding:  0.13333333rem 0.26666667rem;
+  margin: 0.26666667rem;
 }
 #example .center-demo {
   position: relative;
