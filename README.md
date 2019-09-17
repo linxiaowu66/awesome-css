@@ -18,7 +18,19 @@ some useful css functions which sass syntax and less syntax. You can download an
 
     `sass --watch sass.scss:sass.css `
 
+## Features
 
+|                 feature                | moduleName   | scss | less |
+|:--------------------------------------:|--------------|------|------|
+| vertical & horizontal & both center    | _center      | ✅    | ✅    |
+| clear fix                              | _clearfix    | ✅    | ✅    |
+| ellipse text                           | _ellipsis    | ✅    | ✅    |
+| gradient background                    | _gradient    | ✅    | ✅    |
+| hidden scroll bar(only webkit engine)  | _noScroll    | ✅    | ✅    |
+| draw the 0.5px or full border with 1px | _onePxBorder | ✅    | ✅    |
+| px unit transform to rem unit          | _px2rem      | ✅    | ✅    |
+| draw triangle for all directions       | _triangle    | ✅    | ✅    |
+| retina screen compatible               | _retina      |      |      |
 
 ## Note
 
