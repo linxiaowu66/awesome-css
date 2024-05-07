@@ -1,29 +1,35 @@
 @charset "UTF-8";
 #example .clear-fix-demo .container.clearfix:after, #example .clear-fix-demo .container.clearfix:before {
   content: " ";
-  display: table; }
+  display: table;
+}
 #example .clear-fix-demo .container.clearfix:after {
-  clear: both; }
+  clear: both;
+}
 
 #example .ellipsis-demo .one-line-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; }
+  white-space: nowrap;
+}
 
 #example .noscrollbar-demo::-webkit-scrollbar {
   display: none !important;
   width: 0 !important;
   height: 0 !important;
   -webkit-appearance: none;
-  opacity: 0 !important; }
+  opacity: 0 !important;
+}
 
 #example .one-px-border-demo .bottom-border:after {
-  content: '';
-  position: absolute; }
+  content: "";
+  position: absolute;
+}
 
 #example .one-px-border-demo .bottom-border:after {
   left: 0;
-  right: 0; }
+  right: 0;
+}
 
 /*
  * 一像素边框
@@ -33,20 +39,25 @@
  */
 #example .clear-fix-demo .container {
   border: 2px solid orange;
-  padding: 10px; }
-  #example .clear-fix-demo .container .float-left {
-    border: 2px dashed black;
-    float: left;
-    width: 100px; }
-  #example .clear-fix-demo .container .text {
-    border: 2px solid blue; }
+  padding: 10px;
+}
+#example .clear-fix-demo .container .float-left {
+  border: 2px dashed black;
+  float: left;
+  width: 100px;
+}
+#example .clear-fix-demo .container .text {
+  border: 2px solid blue;
+}
 #example .clear-fix-demo .brother {
   margin-top: 10px;
-  border: 2px solid palevioletred; }
+  border: 2px solid palevioletred;
+}
 #example .ellipsis-demo .one-line-ellipsis {
   margin-top: 10px;
   width: 100px;
-  border: 2px solid peru; }
+  border: 2px solid peru;
+}
 #example .ellipsis-demo .multiple-line-ellipsis {
   margin-top: 10px;
   width: 100px;
@@ -56,132 +67,167 @@
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
-  border: 2px solid peru; }
+  border: 2px solid peru;
+}
 #example .noscrollbar-demo {
   margin-top: 10px;
   overflow: scroll;
   height: 100px;
   width: 100px;
-  border: 2px solid purple; }
+  border: 2px solid purple;
+}
 #example .one-px-border-demo .bottom-border {
   position: relative;
   width: 100px;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
+#example .one-px-border-demo .bottom-border:after {
+  border-top: 1px dashed red;
+  bottom: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
   #example .one-px-border-demo .bottom-border:after {
-    border-top: 1px dashed red;
-    bottom: 0; }
-    @media screen and (-webkit-min-device-pixel-ratio: 1) {
-      #example .one-px-border-demo .bottom-border:after {
-        transform: scaleY(1); } }
-    @media screen and (-webkit-min-device-pixel-ratio: 2) {
-      #example .one-px-border-demo .bottom-border:after {
-        transform: scaleY(0.5); } }
-    @media screen and (-webkit-min-device-pixel-ratio: 3) {
-      #example .one-px-border-demo .bottom-border:after {
-        transform: scaleY(0.3333333333); } }
-    @media screen and (-webkit-min-device-pixel-ratio: 4) {
-      #example .one-px-border-demo .bottom-border:after {
-        transform: scaleY(0.25); } }
+    transform: scaleY(1);
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  #example .one-px-border-demo .bottom-border:after {
+    transform: scaleY(0.5);
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+  #example .one-px-border-demo .bottom-border:after {
+    transform: scaleY(0.3333333333);
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 4) {
+  #example .one-px-border-demo .bottom-border:after {
+    transform: scaleY(0.25);
+  }
+}
 #example .one-px-border-demo .full-border {
   position: relative;
   z-index: 1;
   width: 100px;
-  margin-top: 10px; }
-  #example .one-px-border-demo .full-border:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    border: 1px solid red;
-    width: 200%;
-    height: 200%;
-    border-radius: inherit;
-    transform: scale(0.5);
-    transform-origin: top left;
-    border-radius: 0;
-    left: 0;
-    top: 0; }
+  margin-top: 10px;
+}
+#example .one-px-border-demo .full-border:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid red;
+  width: 200%;
+  height: 200%;
+  border-radius: inherit;
+  transform: scale(0.5);
+  transform-origin: top left;
+  border-radius: 0;
+  left: 0;
+  top: 0;
+}
 #example .px-2-rem-demo {
-  height: 10.6666666667rem;
+  height: 24rem;
   width: 5.3333333333rem;
   padding: 0.1333333333rem 0.2666666667rem;
-  margin: 0.2666666667rem; }
+  margin: 0.2666666667rem;
+}
 #example .center-demo {
   position: relative;
   border: 1px solid yellowgreen;
   width: 400px;
-  height: 400px; }
-  #example .center-demo .both {
-    width: 100px;
-    height: 100px;
-    border: 1px solid goldenrod;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  #example .center-demo .vertical {
-    width: 100px;
-    height: 100px;
-    border: 1px solid goldenrod;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
-  #example .center-demo .horizontal {
-    width: 100px;
-    height: 100px;
-    border: 1px solid goldenrod;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); }
+  height: 400px;
+}
+#example .center-demo .both {
+  width: 100px;
+  height: 100px;
+  border: 1px solid goldenrod;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#example .center-demo .vertical {
+  width: 100px;
+  height: 100px;
+  border: 1px solid goldenrod;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#example .center-demo .horizontal {
+  width: 100px;
+  height: 100px;
+  border: 1px solid goldenrod;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 #example .gradient-demo .vertical {
   margin-top: 10px;
   width: 100px;
   height: 100px;
   border: 1px solid grey;
-  background: #ff929c;
-  background: linear-gradient(to bottom, #ff929c, #d80000); }
+  background: rgb(255, 146, 156);
+  background: linear-gradient(to bottom, rgb(255, 146, 156), rgb(216, 0, 0));
+}
 #example .gradient-demo .horizontal {
   margin-top: 10px;
   width: 100px;
   height: 100px;
   border: 1px solid grey;
-  background: #ff929c;
-  background: linear-gradient(to right, #ff929c, #d80000); }
+  background: rgb(255, 146, 156);
+  background: linear-gradient(to right, rgb(255, 146, 156), rgb(216, 0, 0));
+}
 #example .gradient-demo .radius {
   margin-top: 10px;
   width: 100px;
   height: 100px;
   border: 1px solid grey;
-  background: #ff929c;
-  background: radial-gradient(ellipse at center, #ff929c, #d80000); }
+  background: rgb(255, 146, 156);
+  background: radial-gradient(ellipse at center, rgb(255, 146, 156), rgb(216, 0, 0));
+}
 #example .triangle-demo {
-  margin-top: 10px; }
-  #example .triangle-demo .left {
-    width: 0px;
-    height: 0px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #F96001;
-    margin-bottom: 10px; }
-  #example .triangle-demo .right {
-    width: 0px;
-    height: 0px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #F96001;
-    margin-bottom: 10px; }
-  #example .triangle-demo .down {
-    width: 0px;
-    height: 0px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #F96001;
-    margin-bottom: 10px; }
-  #example .triangle-demo .up {
-    width: 0px;
-    height: 0px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #F96001;
-    margin-bottom: 10px; }
+  margin-top: 10px;
+}
+#example .triangle-demo .left {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #F96001;
+  margin-bottom: 10px;
+}
+#example .triangle-demo .right {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #F96001;
+  margin-bottom: 10px;
+}
+#example .triangle-demo .down {
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #F96001;
+  margin-bottom: 10px;
+}
+#example .triangle-demo .up {
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #F96001;
+  margin-bottom: 10px;
+}
+#example .gradient-boder-demo {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(#494c69, #494c69), linear-gradient(#57bcf7,   #abe7d2);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 1px solid transparent;
+}
 
 /*# sourceMappingURL=sass.css.map */

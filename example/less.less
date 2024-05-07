@@ -1,18 +1,19 @@
-@import '../less/_clearfix.less';
-@import '../less/_ellipsis.less';
-@import '../less/_noScroll.less';
-@import '../less/_onePxBorder.less';
-@import '../less/_px2rem.less';
-@import '../less/_center.less';
-@import '../less/_gradient.less';
-@import '../less/_triangle.less';
+@import "../less/_clearfix.less";
+@import "../less/_ellipsis.less";
+@import "../less/_noScroll.less";
+@import "../less/_onePxBorder.less";
+@import "../less/_px2rem.less";
+@import "../less/_center.less";
+@import "../less/_gradient.less";
+@import "../less/_triangle.less";
+@import "../less/_gradientBorder.less";
 
 #example {
-  .clear-fix-demo{
-    .container{
+  .clear-fix-demo {
+    .container {
       border: 2px solid orange;
       padding: 10px;
-      .float-left{
+      .float-left {
         border: 2px dashed black;
         float: left;
         width: 100px;
@@ -20,30 +21,30 @@
       .text {
         border: 2px solid blue;
       }
-      &.clearfix{
-        .clearfix()
+      &.clearfix {
+        .clearfix();
       }
     }
-    .brother{
+    .brother {
       margin-top: 10px;
       border: 2px solid palevioletred;
     }
   }
-  .ellipsis-demo{
-    .one-line-ellipsis{
+  .ellipsis-demo {
+    .one-line-ellipsis {
       margin-top: 10px;
       width: 100px;
       .ellipsis();
       border: 2px solid peru;
     }
-    .multiple-line-ellipsis{
+    .multiple-line-ellipsis {
       margin-top: 10px;
       width: 100px;
       .ellipsis(3);
       border: 2px solid peru;
     }
   }
-  .noscrollbar-demo{
+  .noscrollbar-demo {
     margin-top: 10px;
     overflow: scroll;
     height: 100px;
@@ -51,89 +52,94 @@
     border: 2px solid purple;
     .no-scrollbar();
   }
-  .one-px-border-demo{
-    .bottom-border{
+  .one-px-border-demo {
+    .bottom-border {
       .one-px-border(bottom, dashed, red);
       width: 100px;
       margin-top: 10px;
     }
-    .full-border{
+    .full-border {
       .full-px-border(red);
       width: 100px;
       margin-top: 10px;
     }
   }
-  .px-2-rem-demo{
-    .px2rem(height; 400px);
+  .px-2-rem-demo {
+    .px2rem(height; 900px);
     .px2rem(width; 200px);
     .px2rem(padding; 5px 10px);
-    margin: 10/@toRem;
+    margin: (10 / @toRem);
   }
-  .center-demo{
+  .center-demo {
     // 因为center函数是使用相对定位来实现的，所以其父元素记得设置relative。
     position: relative;
     border: 1px solid yellowgreen;
     width: 400px;
     height: 400px;
-    .both{
+    .both {
       width: 100px;
       height: 100px;
       border: 1px solid goldenrod;
-      .center(both)
+      .center(both);
     }
-    .vertical{
+    .vertical {
       width: 100px;
       height: 100px;
       border: 1px solid goldenrod;
-      .center(vertical)
+      .center(vertical);
     }
-    .horizontal{
+    .horizontal {
       width: 100px;
       height: 100px;
       border: 1px solid goldenrod;
-      .center(horizontal)
+      .center(horizontal);
     }
   }
-  .gradient-demo{
-    .vertical{
+  .gradient-demo {
+    .vertical {
       margin-top: 10px;
       width: 100px;
       height: 100px;
       border: 1px solid grey;
-      .background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), vertical)
+      .background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), vertical);
     }
-    .horizontal{
+    .horizontal {
       margin-top: 10px;
       width: 100px;
       height: 100px;
       border: 1px solid grey;
-      .background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), horizontal)
+      .background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), horizontal);
     }
-    .radius{
+    .radius {
       margin-top: 10px;
       width: 100px;
       height: 100px;
       border: 1px solid grey;
-      .background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), radius)
+      .background-gradient(rgba(255,146,156,1), rgba(216,0,0,1), radius);
     }
   }
-  .triangle-demo{
+  .triangle-demo {
     margin-top: 10px;
-    .left{
+    .left {
       .triangle(left, 10px);
       margin-bottom: 10px;
     }
-    .right{
+    .right {
       .triangle(right, 10px);
       margin-bottom: 10px;
     }
-    .down{
+    .down {
       .triangle(down, 10px);
       margin-bottom: 10px;
     }
-    .up{
+    .up {
       .triangle(up, 10px);
       margin-bottom: 10px;
     }
+  }
+  .gradient-boder-demo {
+    width: 100px;
+    height: 100px;
+    .gradientBorder(#fff, #57bcf7, #abe7d2);
   }
 }

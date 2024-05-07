@@ -4,6 +4,9 @@
  * $style: 线条样式，默认solid
  * $color: 边框颜色
  */
+/*
+这套实现钻研了好久才终于完成，欢迎大家使用，支持多个属性的转换，记得使用的时候，传参必须要使用 ';' !!切记
+*/
 #example .clear-fix-demo .container {
   border: 2px solid orange;
   padding: 10px;
@@ -76,17 +79,17 @@
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1) {
   #example .one-px-border-demo .bottom-border:after {
-    transform: scaleY(1);
+    transform: scaleY(1 / 1);
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   #example .one-px-border-demo .bottom-border:after {
-    transform: scaleY(0.5);
+    transform: scaleY(1 / 2);
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 3) {
   #example .one-px-border-demo .bottom-border:after {
-    transform: scaleY(0.33333333);
+    transform: scaleY(1 / 3);
   }
 }
 #example .one-px-border-demo .full-border {
@@ -110,9 +113,9 @@
   top: 0;
 }
 #example .px-2-rem-demo {
-  height:  10.66666667rem;
-  width:  5.33333333rem;
-  padding:  0.13333333rem 0.26666667rem;
+  height: 24rem;
+  width: 5.33333333rem;
+  padding: 0.13333333rem 0.26666667rem;
   margin: 0.26666667rem;
 }
 #example .center-demo {
@@ -204,4 +207,12 @@
   border-right: 10px solid transparent;
   border-bottom: 10px solid #F96001;
   margin-bottom: 10px;
+}
+#example .gradient-boder-demo {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#57bcf7, #abe7d2);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 1px solid transparent;
 }

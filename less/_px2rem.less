@@ -1,4 +1,4 @@
-.mixin(@attr){
+.mixin(@attr) {
   @{attr}+_: ;
 }
 
@@ -8,14 +8,14 @@
 .px2rem(@attr, @value, @base: 37.5px) {
   .generate(@n, @i: 1) when (@i <= @n) {
     // 计算单个rem值
-    @value1: (extract(@value, @i) / @base) * 1rem;
+    @value1: 1rem * (extract(@value, @i) / @base);
     // 使用less的append属性，将属性值一个个追加起来
     @{attr}+_: @value1;
 
     .generate(@n, (@i + 1));
   }
   .mixin(@attr);
-  .generate(length(@value))
+  .generate(length(@value));
 }
 
 @base: 37.5px;
