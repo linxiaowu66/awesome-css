@@ -1,5 +1,5 @@
 %_onepxElement {
-  content: '';
+  content: "";
   position: absolute;
 }
 
@@ -18,12 +18,12 @@
 @mixin setDprBorder($direction: tb) {
   @for $i from 1 through 4 {
     @media screen and (-webkit-min-device-pixel-ratio: $i) {
-      @if($direction == tb){
-        transform: scaleY(1 / $i);
+      @if ($direction == tb) {
+        transform: scaleY(calc(1 / $i));
       } @else if($direction == lr) {
-        transform: scaleX(1 / $i);
+        transform: scaleX(calc(1 / $i));
       } @else if($direction == full) {
-        transform: scale(1 / $i);
+        transform: scale(calc(1 / $i));
       }
     }
   }
@@ -70,29 +70,29 @@
 }
 
 // 默认下边框
-%one-px-border{
+%one-px-border {
   @include one-px-border();
 }
 
 // 四边一像素边框
-@mixin full-px-border($color: #e5e5e5, $radius: 0, $zIndex: -1){
+@mixin full-px-border($color: #e5e5e5, $radius: 0, $zIndex: -1) {
   position: relative;
   z-index: 1;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     position: absolute;
     z-index: $zIndex;
     border: 1px solid $color;
     width: 200%;
     height: 200%;
     border-radius: inherit;
-    transform: scale(.5);
+    transform: scale(0.5);
     transform-origin: top left;
     border-radius: $radius * 2;
     left: 0;
-    top: 0
+    top: 0;
   }
 }
-%full-px-border{
+%full-px-border {
   @include full-px-border();
 }

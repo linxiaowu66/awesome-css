@@ -1,23 +1,24 @@
 // 去除单位并返回数值
 @function strip-units($number) {
-  @return $number / ($number * 0 + 1);
+  @return calc($number / 1px);
 }
-// px转rem
+// px转rem，调用方式：@include px2rem(height, 400px);
 @mixin px2rem($attr, $num, $base: 37.5) {
   $list: (); //存储所有转换后的值
 
   // 遍历所有值并转换为rem单位
   @for $i from 1 through length($num) {
     // 计算单个rem值
-    $value: strip-units(nth($num, $i)) / $base * 1rem;
+    $value: calc(strip-units(nth($num, $i)) / $base) * 1rem;
     // 添加到列表中
     $list: append($list, $value);
   }
 
   // 设置属性值
-  #{$attr}:$list;
+  #{$attr}: $list;
 }
 
+// 调用方式：margin: px2rem(10px)
 @function px2rem($num, $base: 37.5) {
-  @return strip-units($num) / $base * 1rem;
+  @return calc(strip-units($num) / $base) * 1rem;
 }

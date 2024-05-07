@@ -1,0 +1,7 @@
+.gradientBorder(@boxBg, @lgColor1, @lgColor2) {
+  background-image: linear-gradient(@boxBg, @boxBg),
+    linear-gradient(@lgColor1, @lgColor2);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 1px solid transparent;
+}

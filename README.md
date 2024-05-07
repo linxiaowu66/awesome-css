@@ -2,6 +2,10 @@
 
 some useful css functions which sass syntax and less syntax. You can download and import to your project, each function has corresponding example. check it in example folder.
 
+# Changelog
+
+* 2024.5.7：适配最新的Sass版本：1.77.0 与最新的less版本：4.2.0
+
 ## How to Run
 
 1. install sass and less globally
@@ -17,6 +21,8 @@ some useful css functions which sass syntax and less syntax. You can download an
 3. Run the sass or less compiler
 
     `sass --watch sass.scss:sass.css `
+    或：
+    `lessc  less.less less.css`
 
 ## Features
 
@@ -30,7 +36,7 @@ some useful css functions which sass syntax and less syntax. You can download an
 | draw the 0.5px or full border with 1px | _onePxBorder | ✅    | ✅    |
 | px unit transform to rem unit          | _px2rem      | ✅    | ✅    |
 | draw triangle for all directions       | _triangle    | ✅    | ✅    |
-| retina screen compatible               | _retina      |      |      |
+| draw gradient border             | _gradientBorder    | ✅    | ✅    |
 
 ## Note
 
